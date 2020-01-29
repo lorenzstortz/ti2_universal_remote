@@ -1,0 +1,3 @@
+TV,IRDevice
+TVSocket,RFDevice,345356,456856
+AVSocket,RFDevice,345356,456856
