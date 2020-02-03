@@ -86,6 +86,17 @@ func sendIRCommand(cmd IRCommand) bool{
 
 func sendRFCommand(cmd RFCommand) bool{
 	//do stuff
+	var code string
+	if
+        cmd := exec.Command("./controller", cmd.)
+	var out bytes.Buffer
+	cmd.Stdout = &out
+	err := cmd.Run()
+	if err != nil {
+		fmt.Println(err)
+		return false
+	}
+	return true
 }
 
 func handleRF(w http.ResponseWriter, r *http.Request) {
