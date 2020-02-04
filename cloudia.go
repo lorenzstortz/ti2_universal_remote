@@ -77,7 +77,7 @@ func handleIR(w http.ResponseWriter, r *http.Request) {
 
 func sendIRCommand(cmd IRCommand) bool {
 	// do stuff
-	ex := exec.Command("irsend", "-d", "/dev/lirc0", "SEND_ONCE", cmd.DeviceName, cmd.DeviceKey)
+	ex := exec.Command("irsend","SEND_ONCE", cmd.DeviceName, cmd.DeviceKey)
 	err := ex.Run()
 	if err != nil {
 		fmt.Println(err)
@@ -180,5 +180,5 @@ func main() {
 
 	http.HandleFunc("/ir", handleIR)
 	http.HandleFunc("/rf", handleRF)
-	log.Fatal(http.ListenAndServe(":80", nil))
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }

@@ -1,3 +1,4 @@
-TV,IRDevice
+test,IRDevice,,
+megasat,IRDevice,,
 TVSocket,RFDevice,5588305,5588308
 AVSocket,RFDevice,345356,456856
